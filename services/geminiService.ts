@@ -1,5 +1,5 @@
 
-import { GoogleGenAI, Type } from "@google/genai";
+import { VITE_GEMINI_API_KEY, Type } from "@google/genai";
 import { AnalysisResponse } from "../types";
 
 const SYSTEM_INSTRUCTION = `
