@@ -16,7 +16,7 @@ Guidelines for Analysis:
 ХАРИУЛТЫГ ЗААВАЛ МОНГОЛ ХЭЛ ДЭЭР ӨГӨХ ЁСТОЙ.
 Output must be in JSON format matching the provided schema
 export const analyzeBusinessIdea = async (idea: string, category: string): Promise<AnalysisResponse> => {
-  const model = genAI.getGenerativeModel({ 
+  const model = genAI.getGenerativeModel( 
     model: "gemini-1.5-flash", 
     systemInstruction: SYSTEM_INSTRUCTION 
   });
