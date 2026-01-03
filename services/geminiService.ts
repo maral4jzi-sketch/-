@@ -1,3 +1,4 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 import { AnalysisResponse } from "../types";
@@ -13,11 +14,16 @@ Guidelines for Analysis:
 * Технологийн зөвлөгөө: Санааг илүү амжилттай болгохын тулд Монголд хэрэгжүүлэх боломжтой AI, блокчэйн эсвэл автоматжуулалтын шийдэл санал болго.
 
 ХАРИУЛТЫГ ЗААВАЛ МОНГОЛ ХЭЛ ДЭЭР ӨГӨХ ЁСТОЙ.
-Output must be in JSON format matching the provided schema.
-`;
-
+Output must be in JSON format matching the provided schema
 export const analyzeBusinessIdea = async (idea: string, category: string): Promise<AnalysisResponse> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  const model = genAI.getGenerativeModel({ 
+    model: "gemini-1.5-flash", 
+    systemInstruction: SYSTEM_INSTRUCTION 
+  });
+//
+  
+  // Үргэлжлүүлээд хүсэлтээ илгээнэ...
+};  
   
   const response = await ai.models.generateContent({
     model: 'gemini-3-flash-preview',
