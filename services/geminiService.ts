@@ -1,5 +1,5 @@
-
-import { import.meta.env.VITE_GEMINI_API_KEY, Type } from "@google/genai";
+const genAI = new
+GoogleGenerativeAI { import.meta.env.VITE_GEMINI_API_KEY };
 import { AnalysisResponse } from "../types";
 
 const SYSTEM_INSTRUCTION = `
