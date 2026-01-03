@@ -1,5 +1,5 @@
-const genAI = new
-GoogleGenerativeAI { import.meta.env.VITE_GEMINI_API_KEY };
+
+const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 import { AnalysisResponse } from "../types";
 
 const SYSTEM_INSTRUCTION = `
